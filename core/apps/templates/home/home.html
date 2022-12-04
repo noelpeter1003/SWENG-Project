@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="col-12">
+    <div class="card card-chart">
+      <div class="card-header ">
+        <div class="row">
+          <div class="col-sm-12 text-left">
+            <h1 style="color:rgb(219, 21, 169); font-size: 500%;">Welcome to SWENG Project</h1>
+            <h1 style="color:rgb(219, 21, 169); font-size: 300%;">Brought to you by Noel Peter Industries</h1>
+            <p style="font-size: 300%;">Click on Github to extract Information</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+              <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                <input type="radio" name="options" checked>
+                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Github</span>
+                <span class="d-block d-sm-none">
+                  <i class="tim-icons icon-single-02"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="chartBig1"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

@@ -10,7 +10,12 @@
 
         <ul class="nav">
         {% if request.user.is_authenticated %}
-
+        <li class="{% if 'page-user' in segment %} active {% endif %}">
+          <a href="{% url 'githubPage' %}">
+            <i class="tim-icons icon-single-02"></i>
+            <p>Home</p>
+          </a>
+        </li>
           <li class="{% if 'index' in segment %} active {% endif %}">
             <a href="/">
               <i class="tim-icons icon-chart-pie-36"></i>

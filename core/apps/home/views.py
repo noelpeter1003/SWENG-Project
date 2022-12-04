@@ -1,4 +1,5 @@
 from django import template
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
@@ -11,6 +12,10 @@ def index(request):
 
     html_template = loader.get_template('home/index.html')
     return HttpResponse(html_template.render(context, request))
+
+@login_required(login_url="/login/")
+def homePage(request):
+    return render(request,"home/home.html")
 
 
 @login_required(login_url="/login/")
