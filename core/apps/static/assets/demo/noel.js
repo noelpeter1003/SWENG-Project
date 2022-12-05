@@ -1,3 +1,4 @@
+
 type = ['primary', 'info', 'success', 'warning', 'danger'];
 
 demo = {
@@ -12,97 +13,6 @@ demo = {
         display_buttons.addClass(new_class);
         display_div.attr('data-class', new_class);
       }
-    });
-  },
-
-  initDocChart: function() {
-    chartColor = "#FFFFFF";
-
-    // General configuration for the charts with Line gradientStroke
-    gradientChartOptionsConfiguration = {
-      maintainAspectRatio: false,
-      legend: {
-        display: false
-      },
-      tooltips: {
-        bodySpacing: 4,
-        mode: "nearest",
-        intersect: 0,
-        position: "nearest",
-        xPadding: 10,
-        yPadding: 10,
-        caretPadding: 10
-      },
-      responsive: true,
-      scales: {
-        yAxes: [{
-          display: 0,
-          gridLines: 0,
-          ticks: {
-            display: false
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false
-          }
-        }],
-        xAxes: [{
-          display: 0,
-          gridLines: 0,
-          ticks: {
-            display: false
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false
-          }
-        }]
-      },
-      layout: {
-        padding: {
-          left: 0,
-          right: 0,
-          top: 15,
-          bottom: 15
-        }
-      }
-    };
-
-    ctx = document.getElementById('lineChartExample').getContext("2d");
-
-    gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-    gradientStroke.addColorStop(0, '#80b6f4');
-    gradientStroke.addColorStop(1, chartColor);
-
-    gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
-    gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
-
-    myChart = new Chart(ctx, {
-      type: 'line',
-      responsive: true,
-      data: {
-        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "Oct", "Nov", "Dec"],
-        datasets: [{
-          label: "Active Users",
-          borderColor: "#f96332",
-          pointBorderColor: "#FFF",
-          pointBackgroundColor: "#f96332",
-          pointBorderWidth: 2,
-          pointHoverRadius: 4,
-          pointHoverBorderWidth: 1,
-          pointRadius: 4,
-          fill: true,
-          backgroundColor: gradientFill,
-          borderWidth: 2,
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
-        }]
-      },
-      options: gradientChartOptionsConfiguration
     });
   },
 
@@ -356,14 +266,19 @@ demo = {
     gradientStroke.addColorStop(1, 'rgba(72,72,176,0.2)');
     gradientStroke.addColorStop(0.2, 'rgba(72,72,176,0.0)');
     gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
-
+// actions
     var data = {
-      labels: ['noel', 'noel', 'noel', 'OCT', 'NOV', 'DEC'],
+      labels: [ "noel",
+      "Kinjal-16",
+      "noelpeter1003",
+      "pulikkan",
+      "PradyumnBhardwaj",
+      "Canonyai"],
       datasets: [{
         label: "Data",
         fill: true,
         backgroundColor: gradientStroke,
-        borderColor: '#d048b6',
+        borderColor: '#d048b6', 
         borderWidth: 2,
         borderDash: [],
         borderDashOffset: 0.0,
@@ -374,7 +289,12 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
+        data: [8,
+          7,
+          1,
+          4,
+          9,
+          1],
       }]
     };
 
@@ -392,9 +312,13 @@ demo = {
     gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
     gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)'); //green colors
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
-
+// third one 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+      labels: [ "temp name",
+      "Kinjal-16",
+      "noelpeter1003",
+      "pulikkan",
+      "PradyumnBhardwaj"],
       datasets: [{
         label: "My First dataset",
         fill: true,
@@ -410,7 +334,11 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [90, 27, 60, 12, 80],
+        data: [8,
+          7,
+          1,
+          4,
+          9],
       }]
     };
 
@@ -422,9 +350,19 @@ demo = {
     });
 
 
-
-    var chart_labels = ['noel', 'noel', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    var chart_data = [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
+// main commits
+    var chart_labels = [ "Kinjal Bhattacharyya",
+    "Kinjal-16",
+    "noelpeter1003",
+    "pulikkan",
+    "PradyumnBhardwaj",
+    "Canonyai"];
+    var chart_data = [ 8,
+      7,
+      1,
+      4,
+      9,
+      1];
 
 
     var ctx = document.getElementById("chartBig1").getContext('2d');
@@ -439,7 +377,7 @@ demo = {
       data: {
         labels: chart_labels,
         datasets: [{
-          label: "My First dataset",
+          label: "No. of Commits",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: '#d346b1',
@@ -498,9 +436,13 @@ demo = {
         display: false
       },
       data: {
-        labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+        labels: ["CSS",
+        "Python",
+        "HTML",
+        "Dockerfile",
+        "Shell"],
         datasets: [{
-          label: "Countries",
+          label: "Percentage",
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
@@ -508,7 +450,11 @@ demo = {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [100, 20, 10, 80, 100, 45],
+          data: [ 51.60037827122774,
+            32.226708131012785,
+            15.861021696037245,
+            0.17185880298979758,
+            0.14003309873242767],
         }]
       },
       options: gradientBarChartConfiguration
